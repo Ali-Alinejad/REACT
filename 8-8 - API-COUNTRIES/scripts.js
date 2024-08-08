@@ -8,9 +8,9 @@ function submits() {
   req.open("GET", `https://api.api-ninjas.com/v1/country?name=${city}`);
   req.setRequestHeader("X-Api-Key", apikey);
   req.send();
-  document.querySelector(".flag").style.transition = "2s";
-  document.querySelector(".flag").classList.remove("hidden");
 
+  document.querySelector(".flag").classList.remove("hidden");
+  document.querySelector(".flag").style.transition = "2s";
   req.addEventListener("load", function () {
     const data = JSON.parse(req.responseText);
 
