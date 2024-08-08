@@ -47,7 +47,7 @@ input[type="button"]:hover {
 }
 
 .flag {
-    width: 64px;
+    width: 70px;
     height: 64px;
     display: inline-block;
     z-index: 100;
@@ -55,6 +55,7 @@ input[type="button"]:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-color: #4CAF50;
 }
 
 .hidden {
