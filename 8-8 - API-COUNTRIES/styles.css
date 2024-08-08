@@ -28,11 +28,13 @@ input[type="button"] {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #21a7009a;
     border-radius: 4px;
     box-sizing: border-box;
-    text-align: center;
+    font-size: 14px;
     transition: 2s;
+    background-color: #ffffff;
+    text-align: center;
 }
 
 input[type="button"] {
@@ -40,10 +42,11 @@ input[type="button"] {
     color: white;
     border: none;
     cursor: pointer;
+
 }
 
 input[type="button"]:hover {
-    background-color: #45a049;
+    background-color: #151896;
 }
 
 .flag {
@@ -55,7 +58,10 @@ input[type="button"]:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-color: #4CAF50;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px;
+
 }
 
 .hidden {
