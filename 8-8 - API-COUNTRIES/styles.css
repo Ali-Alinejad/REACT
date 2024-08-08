@@ -47,12 +47,14 @@ input[type="button"]:hover {
 }
 
 .flag {
-    height: 200px;
-    background-color: #45a049;
-    width: 100%;
+    width: 64px;
+    height: 64px;
     display: inline-block;
     z-index: 100;
     transition: 5s;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .hidden {
