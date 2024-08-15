@@ -38,6 +38,16 @@ header h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+
+}
+
+header h2 {
+  color: aliceblue;
+  font-size: x-large;
+  background: linear-gradient(40deg, #02eeda, #d5ff17, #03d5ff, #03d5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
 }
 
 header p {
