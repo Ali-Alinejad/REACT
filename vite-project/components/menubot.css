@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.BtnList button {
+    padding: 5px;
+    width: 20%;
+    margin: 10px;
+    border: none;
+    background-color: rgba(105, 79, 129, 0.849);
+    border-radius: 10px;
+}
+
+.BtnList {
+    background-color: rgba(0, 0, 0, 0.308);
+    text-align: center;
+    height: 400px;
+
+    margin-top: 20px;
+}
+
+.BtnList button:hover {
+    color: rgb(245, 245, 245);
+    background-color: rgb(73, 3, 87);
+    transition: 1s;
+    cursor: pointer;
+
+}
