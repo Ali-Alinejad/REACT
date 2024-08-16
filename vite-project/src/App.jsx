@@ -1,16 +1,7 @@
 import Header from "../components/header.jsx";
 import CORE_CONCEPTS from "./data.js";
 import bg from "../src/assets/config.png";
-function CoreConcepts({ image, title, description }) {
-  return (
-    <li>
-      <img src={image}></img>
-      <h2>{title}</h2>
-      <p>{description}</p>
-    </li>
-  );
-}
-
+import CoreConcepts from "../components/corestyles.jsx";
 function RUN() {
   console.log(CORE_CONCEPTS);
   return (
