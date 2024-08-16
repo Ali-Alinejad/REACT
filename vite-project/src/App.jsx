@@ -3,7 +3,12 @@ import CORE_CONCEPTS from "./data.js";
 import bg from "../src/assets/config.png";
 import CoreConcepts from "../components/corestyles.jsx";
 import Btn1 from "../components/menubot.jsx";
+let khar = "khar manam khar manam";
 function RUN() {
+  function handleSelect(name) {
+    console.log("select" + name);
+  }
+
   return (
     <div>
       <Header />
@@ -17,13 +22,14 @@ function RUN() {
             <CoreConcepts {...CORE_CONCEPTS[3]} />
           </ul>
         </section>
-        <section class="BtnList">
+        <section className="BtnList">
           <h2>examples</h2>
           <menu>
-            <Btn1 label="JSX"></Btn1>
-            <Btn1 label="PHP"></Btn1>
-            <Btn1 label="ASP"></Btn1>
+            <Btn1 selected={() => handleSelect("php")}>php</Btn1>
+            <Btn1 selected={() => handleSelect("jsx")}>jsx</Btn1>
+            <Btn1 selected={() => handleSelect("asp")}>asp</Btn1>
           </menu>
+          <div className="Show">{khar}</div>
         </section>
       </main>
     </div>

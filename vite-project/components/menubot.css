@@ -1,15 +1,18 @@
 * {
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 .BtnList button {
     padding: 5px;
     width: 20%;
+    height: 30px;
     margin: 10px;
     border: none;
     background-color: rgba(105, 79, 129, 0.849);
     border-radius: 10px;
+    color: black;
 }
 
 .BtnList {
@@ -26,4 +29,13 @@
     transition: 1s;
     cursor: pointer;
 
+}
+
+.Show {
+    width: 90%;
+    height: 200px;
+    background-color: rgba(27, 25, 31, 0.658);
+    margin: auto;
+    margin-top: 10px;
+    padding: 17%;
 }
