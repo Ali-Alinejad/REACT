@@ -31,11 +31,11 @@
 
 }
 
-.Show {
+.tab-content {
     width: 90%;
     height: 200px;
     background-color: rgba(27, 25, 31, 0.658);
     margin: auto;
     margin-top: 10px;
-    padding: 17%;
+    transition: 0.5s;
 }

@@ -1,12 +1,16 @@
 import Header from "../components/header.jsx";
+import { useState } from "react";
+
 import CORE_CONCEPTS from "./data.js";
-import bg from "../src/assets/config.png";
+import { EXAMPLES } from "./data.js";
+
 import CoreConcepts from "../components/corestyles.jsx";
 import Btn1 from "../components/menubot.jsx";
-let khar = "khar manam khar manam";
 function RUN() {
+  const [Aa, Bb] = useState("php");
+
   function handleSelect(name) {
-    console.log("select" + name);
+    Bb(name);
   }
 
   return (
@@ -29,7 +33,11 @@ function RUN() {
             <Btn1 selected={() => handleSelect("jsx")}>jsx</Btn1>
             <Btn1 selected={() => handleSelect("asp")}>asp</Btn1>
           </menu>
-          <div className="Show">{khar}</div>
+          <div className="tab-content">
+            <h3>{EXAMPLES[Aa].title}</h3>
+            <p>{EXAMPLES[Aa].description}</p>
+            <code>{EXAMPLES[Aa].code}</code>
+          </div>
         </section>
       </main>
     </div>
