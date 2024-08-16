@@ -3,7 +3,7 @@ import propsImg from "./assets/config.png";
 import jsxImg from "./assets/jsx-ui.png";
 import stateImg from "./assets/state-mgmt.png";
 
-export const CORE_CONCEPTS = [
+const CORE_CONCEPTS = [
   {
     image: componentsImg,
     title: "Components",
@@ -29,3 +29,4 @@ export const CORE_CONCEPTS = [
       "React-managed data which, when changed, causes the component to re-render & the UI to update.",
   },
 ];
+export default CORE_CONCEPTS;
