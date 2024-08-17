@@ -1,3 +1,4 @@
+
 {
   "name": "react-essentials-start",
   "version": "0.0.0",
@@ -15,5 +16,8 @@
     "vite": "^4.3.9"
   },
   "keywords": [],
-  "description": ""
+  "description": "",
+    "quokka": {
+    "babel": true
+    }
 }

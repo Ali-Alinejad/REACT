@@ -122,7 +122,7 @@ main h2 {
   list-style: none;
 }
 
-#examples menu button {
+#examples menu .btn1 {
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 6px;
@@ -134,15 +134,11 @@ main h2 {
   transition: all 0.2s ease-in-out;
 }
 
-#examples menu button:hover {
+#examples menu BtnList:hover {
   background-color: #1b082f;
   color: #ebe7ef;
 }
 
-#examples menu button.active {
-  background-color: #7925d3;
-  color: #ebe7ef;
-}
 
 #tab-content {
   padding: 1rem;
@@ -157,4 +153,8 @@ main h2 {
 
 #tab-content code {
   font-size: 1rem;
+}
+
+.activeBtn {
+  background-color: #d5ff17;
 }
