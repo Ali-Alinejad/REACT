@@ -1,21 +1,21 @@
 import { useState } from "react";
-
 import "./App.css";
 
 function App() {
-  let [Aa, Bb] = useState(" ");
+  const [Aa, Bb] = useState(0);
   function clicked() {
-    {
-      Bb((prevColor) => (prevColor === "black" ? "red" : "black"));
-    }
+    Bb((prevAa) => (prevAa === 0 ? 1 : 0));
   }
+
   return (
-    <div>
+    <div className="container">
       <section className="changeColor">
-        <h2 style={{ color: Aa }}>TEST COLOR</h2>
-        <button onClick={clicked}>CLICK</button>
+        <h2 className={Aa ? "active" : ""}>test color</h2>
+        <h2></h2>
+        <button onClick={clicked}>CliCk</button>
       </section>
     </div>
   );
 }
+
 export default App;

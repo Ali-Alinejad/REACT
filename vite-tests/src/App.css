@@ -9,7 +9,7 @@ body {
     margin: 0;
 }
 
-.root {
+.container {
     background-color: #fff;
     padding: 2rem;
     border-radius: 10px;
@@ -19,17 +19,9 @@ body {
     text-align: center;
 }
 
-h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-input {
-    width: 100%;
-    padding: 0.75rem;
-    margin: 0.5rem 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+h2 {
+    color: black;
+    transition: color 0.3s;
 }
 
 button {
@@ -46,23 +38,6 @@ button {
     font-size: 1rem;
 }
 
-button:hover {
-    background-color: #005bb5;
-}
-
-button::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(255, 255, 255, 0.3);
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-button:active::after {
-    opacity: 1;
-    transition: opacity 0s;
+h2.active {
+    color: red;
 }
