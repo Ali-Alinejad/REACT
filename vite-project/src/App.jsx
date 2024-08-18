@@ -16,14 +16,14 @@ function RUN() {
   }
 
   return (
-    <div>
+    <>
       <Header />
       <main>
         <h2>Time to get started!</h2>
         <section id="core-concepts">
           <ul>
             {CORE_CONCEPTS.map((items) => (
-              <CoreConcepts {...items} />
+              <CoreConcepts key={items.title} {...items} />
             ))}
           </ul>
         </section>
@@ -52,7 +52,7 @@ function RUN() {
           </div>
         </section>
       </main>
-    </div>
+    </>
   );
 }
 
