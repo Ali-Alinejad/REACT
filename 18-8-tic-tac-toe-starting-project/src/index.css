@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Roboto+Slab:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?familamily=Roboto+Slab:wght@400;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -39,7 +39,7 @@ header img {
 }
 
 h1 {
-  font-family: 'Caprasimo', cursive;
+  font-family: cursive;
   font-size: 3rem;
   margin: 0 auto 3rem auto;
   color: #3f3b00;
@@ -151,7 +151,7 @@ ol {
   background: none;
   color: #f8c031;
   border: none;
-  font-family: 'Caprasimo', cursive;
+  font-family: cursive;
   font-size: 4rem;
   text-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
   animation: pulse-text-size 2s infinite ease-out;
@@ -184,7 +184,7 @@ ol {
   color: #3f3b00;
   font-size: 5rem;
   cursor: pointer;
-  font-family: 'Caprasimo', cursive;
+  font-family: cursive;
   padding: 1rem;
 }
 
@@ -203,7 +203,7 @@ ol {
 }
 
 #game-over h2 {
-  font-family: 'Caprasimo', cursive;
+  font-family: cursive;
   font-size: 4rem;
   text-align: center;
   color: #fcd256;
@@ -263,7 +263,7 @@ ol {
 }
 
 #game-hints h2 {
-  font-family: 'Caprasimo', cursive;
+  font-family: cursive;
   font-size: 2rem;
   margin: 0;
 }
