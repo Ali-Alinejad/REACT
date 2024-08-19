@@ -161,9 +161,7 @@ ol {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
-  margin: 3rem 0;
-  padding: 0;
+  text-align: center;
   flex-direction: column;
 }
 
@@ -172,11 +170,16 @@ ol {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  margin: 0;
+
   padding: 0;
 }
 
+
+
+
 #game-board button {
+
+  margin: 10px;
   width: 8rem;
   height: 8rem;
   border: none;

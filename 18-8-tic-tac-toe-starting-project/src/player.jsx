@@ -13,7 +13,12 @@ export default function PlayersInfo({ name, symbol }) {
   }
   let plyersNameShow = <span className="player-name">{nowName}</span>;
   let plyersNameShow2 = (
-    <input type="text" required value={nowName} onChange={handleInputChange} />
+    <input
+      type="text"
+      required
+      value={nowName === "Player1" ? "" : null}
+      onChange={handleInputChange}
+    />
   );
 
   if (Aa) {
