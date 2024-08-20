@@ -1,0 +1,61 @@
+* {
+
+    padding: 0;
+
+}
+
+#bot {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 100px;
+
+}
+
+#bot label {
+    background-color: black;
+    width: 50px;
+}
+
+#section {
+    width: 350px;
+    height: 350px;
+    margin: auto;
+    margin-top: 20%;
+}
+
+#top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px;
+}
+
+#top button {
+    border-radius: 30px;
+    border: none;
+    width: 100px;
+    height: 50px;
+    background-color: purple;
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#top button:hover {
+    transition: 0.5s;
+    background-color: rgb(134, 95, 172);
+}
+
+#top button::after {
+    transition: 0.5s;
+
+    background-color: rgb(228, 228, 228);
+}
+
+
+#bot label.active {
+    background-color: purple;
+
+}
