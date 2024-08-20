@@ -59,3 +59,28 @@
     background-color: purple;
 
 }
+
+.counters {
+    margin-top: 50px;
+}
+
+.counters button {
+    width: 100px;
+    height: 50px;
+    margin: 20px;
+    font-size: large;
+    background: linear-gradient(rgb(248, 248, 248), rgb(199, 150, 150));
+    border: none;
+    cursor: pointer;
+
+}
+
+.counters button:hover {
+    transition: 0.5s;
+    box-shadow: 1px 0px 0px 10px rgba(117, 117, 117, 0.37);
+
+}
+
+.counters label {
+    font-size: 30px;
+}
