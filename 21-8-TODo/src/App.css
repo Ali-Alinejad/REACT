@@ -15,6 +15,12 @@
   width: 100%;
 }
 
+.bg button {
+  width: 500px;
+  height: 100px;
+  cursor: pointer;
+}
+
 .Form {
   color: rgb(124, 124, 124);
   font-family: Inter, system-ui, Helvetica, Arial, sans-serif;
@@ -53,10 +59,32 @@ select {
 
 }
 
-.PackingList label {
-  width: 90%;
-  background-color: antiquewhite;
-  height: 80%;
+.sshow {
+
+  right: 0;
+
+  text-align: right;
+}
+
+li {
+  background-color: rgb(27, 27, 27);
+  margin: 10px;
+  padding: 5px;
+
+  text-align: right;
+
+
+}
+
+
+.show {
+  width: 95%;
+  display: flexbox;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 85%;
+  margin: auto;
+  margin-top: 10px;
 }
 
 @keyframes pulse {
