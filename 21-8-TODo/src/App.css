@@ -1,0 +1,87 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.Logo h1 {
+  color: aqua;
+
+}
+
+.Logo {
+  background-color: rgba(71, 71, 71, 0.562);
+  width: 100%;
+}
+
+.Form {
+  color: rgb(124, 124, 124);
+  font-family: Inter, system-ui, Helvetica, Arial, sans-serif;
+  display: flex;
+
+
+}
+
+.Form :nth-child(n),
+select {
+  margin-left: 5%;
+  margin-top: 30px;
+  text-align: center;
+
+}
+
+
+
+.Form input {
+  height: 40px;
+  cursor: pointer;
+}
+
+select {
+  height: 45px;
+}
+
+
+.PackingList {
+
+  border-bottom: 2px solid rgb(63, 63, 63);
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  height: 50vh;
+
+
+}
+
+.PackingList label {
+  width: 90%;
+  background-color: antiquewhite;
+  height: 80%;
+}
+
+@keyframes pulse {
+  0% {
+    border-bottom-width: 2px;
+    border-bottom-color: rgba(99, 77, 10, 0.466);
+  }
+
+  50% {
+    border-bottom-width: 2px;
+    border-bottom-color: rgb(231, 189, 0);
+
+
+
+  }
+
+  100% {
+    border-bottom-width: 2px;
+    border-bottom-color: rgba(99, 77, 10, 0.459);
+  }
+}
+
+.Form {
+
+
+  border-bottom-style: solid;
+  animation: pulse 3s infinite;
+}
