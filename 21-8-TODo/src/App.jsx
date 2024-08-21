@@ -13,9 +13,11 @@ function Form() {
     <div className="Form">
       <h2>What do you need for trip?👀</h2>
       <select name="" id="">
-        <option value={1}>1</option>
-        <option value={1}>2</option>
-        <option value={1}>3</option>
+        {Array.from({ length: 20 }, (_, i) => i + 1).map((num) => (
+          <option value={num} key={num}>
+            {num}
+          </option>
+        ))}
       </select>
       <input type="text" placeholder="item..."></input>
       <input type="submit" value="ADD" />
