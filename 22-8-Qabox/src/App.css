@@ -5,5 +5,43 @@
 }
 
 body {
-  background-color: rgb(48, 48, 48);
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  line-height: 1;
+}
+.acc{
+  width: 780px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+text-align: center;
+}
+.main {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.11);
+  padding: 20px 24px;
+  padding-right: 48px;
+  cursor: pointer;
+  border-top: 2px  solid rgb(0, 121, 121);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 24px;
+  row-gap: 32px;
+  align-items: center;
+      width: 780px;
+margin-top: 25px;
+}
+h1{
+font-size: 24px;
+font-weight: 500;
+color: rgba(65, 65, 65, 0.774);
+}
+.content-box{
+  grid-column:  2/-1;
+  padding-bottom: 16px;
+  line-height: 1.6;
+}
+h1.active{
+  color: rgb(0, 143, 136);
+  font-size: 32px;
+  animation: 1s;
 }
