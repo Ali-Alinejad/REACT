@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./App.css";
 
-
 function App() {
   return (
     <>
@@ -11,29 +10,27 @@ function App() {
 }
 
 function INputs() {
-  let rates ;
+  let rates;
   const [Natije, setNatije] = useState(0);
-  const [amount,Setamount] = useState(1);
+  const [amount, Setamount] = useState(1);
   const [Fromcur, SetFromcur] = useState("USD");
   const [tocur, Settocur] = useState("EUR");
-
   async function convertHandle() {
-    const host = await "api.frankfurter.app";
+    const host = "api.frankfurter.app";
     await fetch(
       `https://${host}/latest?${amount}=10&from=${Fromcur}&to=${tocur}`
     )
       .then((resp) => resp.json())
       .then((data) => {
         rates = data.rates[tocur];
-        setNatije ( rates * amount);
-        console.log(Natije);
+        setNatije((rates * amount).toFixed(5));
       });
   }
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <h1 className="text-2xl font-bold mb-4 text-center">
-          Currency Converter
+          Currency Converter <span>🪙</span>
         </h1>
         <input
           onChange={(e) => Setamount(e.target.value)}
@@ -53,6 +50,8 @@ function INputs() {
             <option value="JPY">JPY</option>
           </select>
           <span className="mx-2 self-center">to</span>
+          <span>💴💴</span>
+
           <select
             value={tocur}
             className="p-3 rounded-lg border w-1/2 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
@@ -68,10 +67,16 @@ function INputs() {
           onClick={convertHandle}
           className="mt-5 w-full bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600 transition duration-300"
         >
-          {amount} {Fromcur} <span>⏩</span> {tocur}
+          {amount} {Fromcur} <span>💱</span> {tocur}
         </button>
-        <h4 className="mt-10 text-gray-700 text-2xl text-center font-serif">
-          {Natije}
+        <h4 className="mt-10 text-gray-700 text-2xl text-center font-bold text-4xl">
+          {Natije}{" "}
+          <span>
+            {tocur === "EUR" && "💶"}
+            {tocur === "USD" && "💵"}
+            {tocur === "JPY" && "💴 "}
+            {tocur === "CAD" && "🟥🍁🟥"}
+          </span>
         </h4>
       </div>
     </div>
