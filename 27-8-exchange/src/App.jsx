@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
@@ -15,17 +15,17 @@ function INputs() {
   const [amount, Setamount] = useState(1);
   const [Fromcur, SetFromcur] = useState("USD");
   const [tocur, Settocur] = useState("EUR");
-  async function convertHandle() {
+
+  useEffect(function () {
+    async function convertHandle() {
     const host = "api.frankfurter.app";
-    await fetch(
-      `https://${host}/latest?${amount}=10&from=${Fromcur}&to=${tocur}`
-    )
-      .then((resp) => resp.json())
-      .then((data) => {
+      const res = await fetch(`https://${host}/latest?${amount}=10&from=${Fromcur}&to=${tocur}`);
+      const data = await res.json();
         rates = data.rates[tocur];
-        setNatije((rates * amount).toFixed(5));
-      });
-  }
+        setNatije((rates * amount).toFixed(3));
+    }
+    convertHandle();
+}, [amount,Fromcur,tocur]);
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
@@ -63,13 +63,13 @@ function INputs() {
             <option value="JPY">JPY</option>
           </select>
         </div>
-        <button
+        {/*   <button
           onClick={convertHandle}
           className="mt-5 w-full bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600 transition duration-300"
         >
           {amount} {Fromcur} <span>💱</span> {tocur}
-        </button>
-        <h4 className="mt-10 text-gray-700 text-2xl text-center font-bold text-4xl">
+        </button> */}
+        <h4 className="mt-10 text-gray-700 text-2xl text-center font-bold text-4xl rounded-lg h-[100%] p-2  bg-gradient-to-t from-green-300 to-green-100 hover:bg-gradient-to-tr from-green-300 to-green-500 ">
           {Natije}{" "}
           <span>
             {tocur === "EUR" && "💶"}
