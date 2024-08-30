@@ -12,20 +12,26 @@ function App() {
 function INputs() {
   let rates;
   const [Natije, setNatije] = useState(0);
-  const [amount, Setamount] = useState(1);
+  const [amount, Setamount] = useState(0);
   const [Fromcur, SetFromcur] = useState("USD");
   const [tocur, Settocur] = useState("EUR");
 
-  useEffect(function () {
-    async function convertHandle() {
-    const host = "api.frankfurter.app";
-      const res = await fetch(`https://${host}/latest?${amount}=10&from=${Fromcur}&to=${tocur}`);
-      const data = await res.json();
+  useEffect(
+    function () {
+      async function convertHandle() {
+        const host = "api.frankfurter.app";
+        const res = await fetch(
+          `https://${host}/latest?${amount}=10&from=${Fromcur}&to=${tocur}`
+        );
+        const data = await res.json();
         rates = data.rates[tocur];
         setNatije((rates * amount).toFixed(3));
-    }
-    convertHandle();
-}, [amount,Fromcur,tocur]);
+      }
+    if  (Fromcur === tocur) return setNatije(amount)
+      convertHandle();
+    },
+    [amount, Fromcur, tocur]
+  );
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
@@ -51,7 +57,6 @@ function INputs() {
           </select>
           <span className="mx-2 self-center">to</span>
           <span>💴💴</span>
-
           <select
             value={tocur}
             className="p-3 rounded-lg border w-1/2 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
@@ -69,7 +74,13 @@ function INputs() {
         >
           {amount} {Fromcur} <span>💱</span> {tocur}
         </button> */}
-        <h4 className="mt-10 text-gray-700 text-2xl text-center font-bold text-4xl rounded-lg h-[100%] p-2  bg-gradient-to-t from-green-300 to-green-100 hover:bg-gradient-to-tr from-green-300 to-green-500 ">
+        <h4
+          className="mt-10
+         text-gray-700
+         text-2xl text-center
+          font-bold text-4xl rounded-lg border-2 border-white h-[100%] p-5 hover:border-2 hover:border-yellow-300 border-solid
+          transition duration-300"
+        >
           {Natije}{" "}
           <span>
             {tocur === "EUR" && "💶"}

@@ -2,8 +2,11 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
-  },
-  plugins: [],
-};
-
+    extend: {
+      rotate: {
+        '180': '180deg'
+      }
+    },
+    plugins: [],
+  }
+}
