@@ -1,20 +1,21 @@
-<div align="center">
-
-  <div>
-   <p align="" height="500px">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=C#,python,vite,css,discord,figma,github,html,nextjs,nodejs,ps,pychar,,vscode,redux,stackoverflow,tailwind,webpack,windows,vim,Vue,ts,react,js"/>
-  </a>
-</p>
-  </div>
-
-
-<img align="right" src="https://github-readme-stats.vercel.app/api?username=WINFOORD&include_all_commits=true&count_private=true&show_icons=true&line_height=20&title_color=7A7CDB&icon_color=2234AE&text_color=D3D3D0&bg_color=0,000000,130F40" alt="ALi's Github Stats">
+<div>
 <h1 align='center'> Hi! :wave:</h1>
-<p align='center'>
-I'm Ali
-</p>
-<p align='center'>For Make some info checkout <a href="https://www.linkedin.com/in/ali-alinejad-1b5827202/"><i class="bi bi-linkedin"></i>Linkdin</a>.</p>
 
-<h1 align='center'><i>Stay awesome!</i></h1>
+  <div  align="Right">
+  <img height="160em" src="https://github-readme-stats.vercel.app/api?username=winfoord&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"/>
+  <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=winfoord&layout=compact&langs_count=7&theme=dracula"/>
+  </div>
+<div align="left">
+ 
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=git,kubernetes,docker,c,vim" />
+  </a>
+
+</div>
+
+
+<div align="center">
+  <a href = "mailto:alialineejad@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+  <a href="https://www.linkedin.com/in/ali-alinejad-1b5827202/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+</div>
 </div>
