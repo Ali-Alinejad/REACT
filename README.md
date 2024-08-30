@@ -16,7 +16,7 @@
 -📖 Hi im Ali Frontend Maestro Designing the Future </br>
     - 🚀 JavaScript Virtuoso from Iran ! </br>
     - 🌟 Tech Innovator, Pushing Boundaries </br>
-    - 🌟 Tech Innovator, Pushing Boundaries </br>
+    - 🎶  Chilling Out and Crafting Code </br>
     - 🧠  Transforming Ideas into Reality</br>
     </br>
     </br>
