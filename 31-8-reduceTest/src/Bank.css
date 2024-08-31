@@ -1,0 +1,35 @@
+/* Bank.css */
+
+.bank-container {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bank-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.balance,
+.loan {
+    font-size: 26px;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.bank-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 20px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+}
+
+.bank-button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Mid{
+    text-align: center;
+    margin: auto;
+display: flex;
+flex-direction: column;
+width: 60%;
+}
+button{
+    padding: 10px;
+    margin: 5px;
+    margin-top: 25px;
+}
