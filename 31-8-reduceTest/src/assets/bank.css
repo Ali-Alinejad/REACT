@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mid{
+    text-align: center;
+    margin: auto;
+    
+}
+.mid button , p {
+    padding: 5px;
+
+
+}
