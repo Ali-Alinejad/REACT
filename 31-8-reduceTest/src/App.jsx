@@ -1,79 +1,91 @@
 /* eslint-disable no-unused-vars */
-import { useReducer } from "react";
-import "./Bank.css"; // Import your CSS file
+import React, { useReducer, useState, useEffect } from "react";
+import "./Bank.css";
+import Bank from "./Bank.jsx";
+import AlertMessage from "./AlertMessage.jsx";
 
 function App() {
   const initialState = {
     balance: 0,
     loan: 0,
     isActive: false,
+    loanRQ: false,
   };
+
+  const [showAlert, setShowAlert] = useState(false);
+
+  useEffect(() => {
+    if (showAlert) {
+      const timer = setTimeout(() => {
+        setShowAlert(false);
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [showAlert]);
+
   function Reducer(state, action) {
     switch (action.type) {
       case "openAccount":
-        console.log(state);
         return {
           ...state,
           balance: 500,
           isActive: true,
         };
       case "withdraw":
+        if (state.balance <= 0) return state;
+
         return {
           ...state,
-          balance: 500, // Assuming a fixed withdrawal amount
+          balance: state.balance - action.payload,
         };
 
       case "deposit":
-        return "";
+        return {
+          ...state,
+          balance: state.balance + action.payload,
+        };
+
       case "CloseAccount":
-        return "";
+        return {
+          isActive: false,
+        };
       case "ReqLoan":
-        return "";
+        return {
+          ...state,
+          loan: 5000,
+          balance: state.balance + action.payload,
+          loanRQ: action.status,
+        };
       case "PayLoan":
-        return "";
+        if (state.balance >= 5000) {
+          return {
+            ...state,
+            loan: 0,
+            balance: state.balance - action.payload,
+            loanRQ: action.status,
+          };
+        } else {
+          setShowAlert(true);
+          return state;
+        }
       default:
-        throw new Error("unknown action type " + action.type);
+        return state;
     }
   }
-  const [{ balance, loan, isActive }, dispatch] = useReducer(
-    Reducer,
-    initialState
-  );
+
+  const [state, dispatch] = useReducer(Reducer, initialState);
+
   return (
     <>
-      <div className="bank-container">
-        <h1 className="bank-title">use Reducer Bank Acc</h1>
-        <p className="balance">Balance: {balance}</p>
-        <p className="loan">Loan: {loan}</p>
-
-        <button
-          className="bank-button"
-          onClick={() => dispatch({ type: "openAccount" })}
-          disabled={isActive}
-        >
-          Open Account
-        </button>
-
-        <button className="bank-button" disabled={!isActive}>
-          Deposit $150
-        </button>
-        <button
-          className="bank-button"
-          disabled={!isActive}
-          onClick={() => dispatch({ type: "withdraw" })}
-        >
-          Withdraw $50
-        </button>
-        <button className="bank-button" disabled={!isActive}>
-          Request a Loan of $5000
-        </button>
-        <button className="bank-button" disabled={!isActive}>
-          Pay Loan
-        </button>
-        <button className="bank-button" disabled={!isActive}>
-          Close Account
-        </button>
-      </div>
+      {showAlert && <AlertMessage message="موجودی حساب شما کافی نیست" />}
+      <Bank
+        balance={state.balance}
+        loan={state.loan}
+        isActive={state.isActive}
+        dispatch={dispatch}
+        loanRQ={state.loanRQ}
+      />
     </>
   );
 }
